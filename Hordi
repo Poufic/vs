@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+double func (double x) 
+{
+return pow (x, 2) * cos (x);
+}
+double find (double right, double left, double pogr) 
+{
+while (fabs (left - right) > pogr)
+{
+right =	left - (left - right) * func (left) / (func (left) - func (right));
+left = right - (right - left) * func (right) / (func (right) - func (left));
+}
+return left;
+}
+int main () 
+{
+double a = 3, b = 5;
+std::cout << find (a, b, 0.0001) << std::endl;
+return 0;
+}
+
