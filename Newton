@@ -11,11 +11,11 @@ int main() {
  double tmp,x,pogr;
  int N=0;
  
- cout<<"pogr=";
+ cout<<"pogr=";//отразите потом в отчете, какие данные Вы вводите 
  cin>>pogr;  
  cout<<"x0=";
  cin>>x;    
- tmp=x+2*pogr;
+ tmp=x+2*pogr;//забавное решение:) но можнно было просто сделать цикл do-while
     while(fabs(x-tmp)>pogr) { 
      tmp=x;
      x=x-f(x)/df(x);
