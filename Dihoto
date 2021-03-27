@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#define pi 3.14
+#define pi 3.14 //M_PI уже есть константа в Math
  
 using namespace std;
  
@@ -13,9 +13,9 @@ int main()
 {
     double right = 6, left = 3;
     const double Pogreshnost =1E-4;
-    while (right-left > Pogreshnost) {
+    while (right-left > Pogreshnost) {//лучше взять abs(right-left)>Pogreshnost
        double mid = (left + right) / 2;
-       if (f (mid)*f (right) > 0)
+       if (f (mid)*f (right) > 0) //ок, так можно
           right = mid;
        else
           left = mid;
