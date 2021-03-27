@@ -7,7 +7,7 @@ return pow (x, 2) * cos (x);
 }
 double find (double right, double left, double pogr) 
 {
-while (fabs (left - right) > pogr)
+while (fabs (left - right) > pogr)//ладно, пусть будет так, но отмечаем про себя, что метод может не сойтись на какой то функции другой
 {
 right =	left - (left - right) * func (left) / (func (left) - func (right));
 left = right - (right - left) * func (right) / (func (right) - func (left));
